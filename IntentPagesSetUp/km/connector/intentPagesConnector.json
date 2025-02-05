@@ -1,0 +1,349 @@
+{
+  "$id": "intentPagesConnector",
+  "$schema": "https://schema.yext.com/config/km/connector/v6",
+  "displayName": "Intent Pages Connector",
+  "source": {
+    "sourceConfig": {
+      "nativeSourceConfig": {
+        "source": "yextAccount",
+        "operation": "fetchEntities",
+        "inputs": {
+          "apiKey": "${{km/connector.intentPagesConnector.apiKey}}",
+          "entityType": "location",
+          "environment": "sandbox",
+          "vParam": "20250204"
+        }
+      }
+    },
+    "selectors": [
+      {
+        "type": "JSON",
+        "header": "address.line1",
+        "path": "address.line1"
+      },
+      {
+        "type": "JSON",
+        "header": "address.city",
+        "path": "address.city"
+      },
+      {
+        "type": "JSON",
+        "header": "address.region",
+        "path": "address.region"
+      },
+      {
+        "type": "JSON",
+        "header": "address.postalCode",
+        "path": "address.postalCode"
+      },
+      {
+        "type": "JSON",
+        "header": "address.countryCode",
+        "path": "address.countryCode"
+      },
+      {
+        "type": "JSON",
+        "header": "addressHidden",
+        "path": "addressHidden"
+      },
+      {
+        "type": "JSON",
+        "header": "hours.monday.openIntervals[].start",
+        "path": "hours.monday.openIntervals[].start"
+      },
+      {
+        "type": "JSON",
+        "header": "hours.monday.openIntervals[].end",
+        "path": "hours.monday.openIntervals[].end"
+      },
+      {
+        "type": "JSON",
+        "header": "hours.tuesday.openIntervals[].start",
+        "path": "hours.tuesday.openIntervals[].start"
+      },
+      {
+        "type": "JSON",
+        "header": "hours.tuesday.openIntervals[].end",
+        "path": "hours.tuesday.openIntervals[].end"
+      },
+      {
+        "type": "JSON",
+        "header": "hours.wednesday.openIntervals[].start",
+        "path": "hours.wednesday.openIntervals[].start"
+      },
+      {
+        "type": "JSON",
+        "header": "hours.wednesday.openIntervals[].end",
+        "path": "hours.wednesday.openIntervals[].end"
+      },
+      {
+        "type": "JSON",
+        "header": "hours.thursday.openIntervals[].start",
+        "path": "hours.thursday.openIntervals[].start"
+      },
+      {
+        "type": "JSON",
+        "header": "hours.thursday.openIntervals[].end",
+        "path": "hours.thursday.openIntervals[].end"
+      },
+      {
+        "type": "JSON",
+        "header": "hours.friday.openIntervals[].start",
+        "path": "hours.friday.openIntervals[].start"
+      },
+      {
+        "type": "JSON",
+        "header": "hours.friday.openIntervals[].end",
+        "path": "hours.friday.openIntervals[].end"
+      },
+      {
+        "type": "JSON",
+        "header": "hours.saturday.openIntervals[].start",
+        "path": "hours.saturday.openIntervals[].start"
+      },
+      {
+        "type": "JSON",
+        "header": "hours.saturday.openIntervals[].end",
+        "path": "hours.saturday.openIntervals[].end"
+      },
+      {
+        "type": "JSON",
+        "header": "hours.sunday.openIntervals[].start",
+        "path": "hours.sunday.openIntervals[].start"
+      },
+      {
+        "type": "JSON",
+        "header": "hours.sunday.openIntervals[].end",
+        "path": "hours.sunday.openIntervals[].end"
+      },
+      {
+        "type": "JSON",
+        "header": "name",
+        "path": "name"
+      },
+      {
+        "type": "JSON",
+        "header": "cityCoordinate.latitude",
+        "path": "cityCoordinate.latitude"
+      },
+      {
+        "type": "JSON",
+        "header": "cityCoordinate.longitude",
+        "path": "cityCoordinate.longitude"
+      },
+      {
+        "type": "JSON",
+        "header": "c_intentPageType",
+        "path": "c_intentPageType"
+      },
+      {
+        "type": "JSON",
+        "header": "c_internalName",
+        "path": "c_internalName"
+      },
+      {
+        "type": "JSON",
+        "header": "geocodedCoordinate.latitude",
+        "path": "geocodedCoordinate.latitude"
+      },
+      {
+        "type": "JSON",
+        "header": "geocodedCoordinate.longitude",
+        "path": "geocodedCoordinate.longitude"
+      },
+      {
+        "type": "JSON",
+        "header": "isoRegionCode",
+        "path": "isoRegionCode"
+      },
+      {
+        "type": "JSON",
+        "header": "mainPhone",
+        "path": "mainPhone"
+      },
+      {
+        "type": "JSON",
+        "header": "timezone",
+        "path": "timezone"
+      },
+      {
+        "type": "JSON",
+        "header": "websiteUrl.url",
+        "path": "websiteUrl.url"
+      },
+      {
+        "type": "JSON",
+        "header": "yextDisplayCoordinate.latitude",
+        "path": "yextDisplayCoordinate.latitude"
+      },
+      {
+        "type": "JSON",
+        "header": "yextDisplayCoordinate.longitude",
+        "path": "yextDisplayCoordinate.longitude"
+      },
+      {
+        "type": "JSON",
+        "header": "yextRoutableCoordinate.latitude",
+        "path": "yextRoutableCoordinate.latitude"
+      },
+      {
+        "type": "JSON",
+        "header": "yextRoutableCoordinate.longitude",
+        "path": "yextRoutableCoordinate.longitude"
+      },
+      {
+        "type": "JSON",
+        "header": "meta.accountId",
+        "path": "meta.accountId"
+      },
+      {
+        "type": "JSON",
+        "header": "meta.uid",
+        "path": "meta.uid"
+      },
+      {
+        "type": "JSON",
+        "header": "meta.id",
+        "path": "meta.id"
+      },
+      {
+        "type": "JSON",
+        "header": "meta.timestamp",
+        "path": "meta.timestamp"
+      },
+      {
+        "type": "JSON",
+        "header": "meta.createdTimestamp",
+        "path": "meta.createdTimestamp"
+      },
+      {
+        "type": "JSON",
+        "header": "meta.folderId",
+        "path": "meta.folderId"
+      },
+      {
+        "type": "JSON",
+        "header": "meta.language",
+        "path": "meta.language"
+      },
+      {
+        "type": "JSON",
+        "header": "meta.countryCode",
+        "path": "meta.countryCode"
+      },
+      {
+        "type": "JSON",
+        "header": "meta.entityType",
+        "path": "meta.entityType"
+      },
+      {
+        "type": "JSON",
+        "header": "timeZoneUtcOffset",
+        "path": "timeZoneUtcOffset"
+      },
+      {
+        "type": "JSON",
+        "header": "displayCoordinate.latitude",
+        "path": "displayCoordinate.latitude"
+      },
+      {
+        "type": "JSON",
+        "header": "displayCoordinate.longitude",
+        "path": "displayCoordinate.longitude"
+      },
+      {
+        "type": "JSON",
+        "header": "mobilePhone",
+        "path": "mobilePhone"
+      },
+      {
+        "type": "JSON",
+        "header": "paymentOptions",
+        "path": "paymentOptions"
+      }
+    ]
+  },
+  "destinationConfig": {
+    "contentConfig": {
+      "entityTypes": [
+        "ce_intentPageEntity"
+      ]
+    }
+  },
+  "transforms": [
+    {
+      "splitIntoRows": {
+        "inputHeaders": [
+          "c_intentPageType"
+        ],
+        "delimiter": ","
+      }
+    },
+    {
+      "mergeColumns": {
+        "inputHeaders": [
+          "c_intentPageType",
+          "c_internalName"
+        ],
+        "newColumnHeader": "Intent Entity Name",
+        "delimiter": " "
+      }
+    },
+    {
+      "duplicateColumn": {
+        "inputHeader": "Intent Entity Name",
+        "newColumnHeader": "New Entity ID"
+      }
+    },
+    {
+      "findAndReplace": {
+        "inputHeaders": {
+          "headers": [
+            "New Entity ID"
+          ]
+        },
+        "valuesToFind": [
+          {
+            "plainText": {
+              "value": " ",
+              "ignoreCase": false
+            }
+          }
+        ],
+        "replacement": "-",
+        "useAsNonLiteralReplacement": false
+      }
+    }
+  ],
+  "mappings": [
+    {
+      "clearValueIfBlank": false,
+      "field": "name",
+      "header": "Intent Entity Name",
+      "subfieldPath": []
+    },
+    {
+      "clearValueIfBlank": false,
+      "field": "entityId",
+      "header": "New Entity ID",
+      "subfieldPath": []
+    },
+    {
+      "clearValueIfBlank": false,
+      "field": "c_boutique",
+      "header": "meta.id",
+      "listSettings": "REPLACE_EXISTING",
+      "subfieldPath": []
+    },
+    {
+      "clearValueIfBlank": false,
+      "field": "c_intentPageType",
+      "header": "c_intentPageType",
+      "subfieldPath": []
+    }
+  ],
+  "comprehensiveModeConfig": {
+    "comprehensiveSet": "ENTITIES_CREATED_BY_THIS_CONNECTOR",
+    "actionOnMissingEntities": "DELETE"
+  }
+}
